@@ -1,0 +1,27 @@
+/* August 2026 portfolio update */
+.ongoing-wrap { margin-top: 2.4rem; padding-top: 2rem; border-top: 1px solid var(--line); }
+.ongoing-heading { display: flex; justify-content: space-between; align-items: end; gap: 2rem; margin-bottom: 1rem; }
+.ongoing-heading h3 { margin: .1rem 0 0; font-family: Georgia, "Times New Roman", serif; font-size: 1.8rem; letter-spacing: -.025em; }
+.ongoing-heading > p { max-width: 520px; margin: 0; color: var(--muted); font-size: .9rem; }
+.ongoing-card { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(230px, .7fr); gap: 1.4rem; align-items: center; padding: 1.45rem 1.55rem; background: rgba(255,255,255,.88); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: 0 12px 30px rgba(72,48,38,.045); }
+.ongoing-card h4 { margin: .5rem 0 .35rem; font-size: 1.08rem; line-height: 1.38; }
+.ongoing-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+.work-status { display: inline-flex; padding: .25rem .58rem; border-radius: 999px; background: var(--olive-soft); color: #565643; font-size: .72rem; font-weight: 800; }
+.work-tags { display: flex; flex-wrap: wrap; gap: .45rem; justify-content: flex-end; }
+.work-tags span { padding: .3rem .58rem; border-radius: 999px; background: var(--accent-soft); color: var(--accent-dark); font-size: .74rem; font-weight: 720; }
+
+.service-grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 1rem; }
+.service-card { padding: 1.4rem; background: rgba(255,255,255,.75); border: 1px solid var(--line); border-radius: var(--radius); }
+.service-type { margin: 0 0 .45rem; color: var(--olive); text-transform: uppercase; letter-spacing: .1em; font-size: .68rem; font-weight: 850; }
+.service-card h3 { margin: 0 0 .42rem; font-size: 1.05rem; }
+.service-card > p:not(.service-type) { margin: 0; color: var(--muted); font-size: .89rem; }
+
+@media (max-width: 900px) {
+  .service-grid { grid-template-columns: 1fr; }
+  .ongoing-card { grid-template-columns: 1fr; }
+  .work-tags { justify-content: flex-start; }
+}
+
+@media (max-width: 720px) {
+  .ongoing-heading { align-items: flex-start; flex-direction: column; gap: .5rem; }
+}

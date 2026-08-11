@@ -7,60 +7,58 @@ const activeSubmissions = [
     status: "Under review"
   },
   {
-    title: "Auditable Concept Learning for Interpretable Prediction from Longitudinal Clinical Text",
-    authors: "Congning Ni, Weixin Liu, Qingyuan Song, Bradley Malin, Zhijun Yin",
-    venue: "Conference manuscript",
-    date: "Submitted June 30, 2026",
-    status: "Double-blind review",
-    blind: true
-  },
-  {
     title: "Coverage-Controlled Preference Mining from Noisy Claim Verification for Evidence-Grounded Generation",
     authors: "Weixin Liu, Congning Ni, Qingyuan Song, Susannah Leigh Rose, Murat Kantarcioglu, Bradley A. Malin, Zhijun Yin",
-    venue: "ACML 2026",
-    date: "Submitted July 3, 2026 · revised July 6, 2026",
-    status: "Under review",
-    url: "https://openreview.net/forum?id=TMfZW11tZD"
+    venue: "Conference manuscript",
+    date: "Current submission, 2026",
+    status: "Under review"
   },
   {
-    title: "Characterizing Medication Evidence Across Clinical Notes and Structured EHR History",
+    title: "Characterizing Treatment-Context Medication Evidence Across Clinic Notes and Structured EHR Medication History",
     authors: "Mingyang Jiang, Congning Ni, Weixin Liu, Zhijun Yin",
-    venue: "Biomedical informatics conference manuscript",
-    date: "Submitted July 2026",
-    status: "Double-blind review",
-    blind: true
+    venue: "Conference manuscript",
+    date: "Submitted August 2026",
+    status: "Under review",
+    url: "https://arxiv.org/abs/2608.01570"
   },
   {
     title: "CoRA: Confidence–Rationale Alignment for Reliable Chain-of-Thought Reasoning",
     authors: "Juming Xiong, Weixin Liu, Kevin H. Guo, Congning Ni, Junchao Zhu, Chongyu Qu, Chao Yan, Katherine Brown, Avinash Baidya, Xiang Gao, Bradley A. Malin, Zhijun Yin",
-    venue: "ACL Rolling Review, May 2026 cycle",
-    date: "Submitted May 26, 2026",
+    venue: "Conference manuscript",
+    date: "Current submission, 2026",
     status: "Under review",
-    url: "https://openreview.net/forum?id=vub7Jh8iFI"
+    url: "https://arxiv.org/abs/2606.14961"
   },
   {
     title: "Vectors Are Not Neutral: Sensitive-Information Inference from Exported LLM Representations in Summarization",
     authors: "Weixin Liu, Bowen Qu, Juming Xiong, Congning Ni, Bradley A. Malin, Zhijun Yin",
-    venue: "ACL Rolling Review, May 2026 cycle",
-    date: "Submitted May 25, 2026",
+    venue: "Conference manuscript",
+    date: "Current submission, 2026",
     status: "Under review",
-    url: "https://openreview.net/forum?id=1gjPrnt6uJ"
+    url: "https://arxiv.org/abs/2605.26433"
   },
   {
     title: "Learning When to Sample: Confidence-Aware Selective Sampling for Efficient Chain-of-Thought Reasoning",
     authors: "Juming Xiong, Kevin H. Guo, Congning Ni, Weixin Liu, Chao Yan, Katherine Brown, Avinash Baidya, Xiang Gao, Bradley A. Malin, Zhijun Yin",
-    venue: "ACL Rolling Review, May 2026 cycle",
-    date: "Submitted May 25, 2026",
+    venue: "Conference manuscript",
+    date: "Current submission, 2026",
     status: "Under review",
-    url: "https://openreview.net/forum?id=LSzpSbhk2k"
+    url: "https://arxiv.org/abs/2603.08999"
   },
   {
     title: "A Multi-Stakeholder Benchmark for Hallucination and Omission Detection in Mental Health Chatbot Responses",
     authors: "Khizar Hussain, Bradley A. Malin, Congning Ni, Laurie Lovett Novak, Shelagh A. Mulvaney, Susannah Leigh Rose, Zhijun Yin, Murat Kantarcioglu",
-    venue: "NeurIPS 2026 Evaluations and Datasets Track",
-    date: "Submitted May 4, 2026",
+    venue: "Conference manuscript",
+    date: "Submitted May 2026",
+    status: "Under review"
+  },
+  {
+    title: "DRIFT: Direct-Recursive Intervention-Conditioned Forecasting of ICU Physiological Trajectories",
+    authors: "Weixin Liu, Juming Xiong, Congning Ni, Yanfan Zhu, Xingtao Lin, Bradley A. Malin, Zhijun Yin",
+    venue: "Conference manuscript",
+    date: "Submitted July 2026",
     status: "Under review",
-    url: "https://openreview.net/forum?id=EjLWkSuIlM"
+    url: "https://arxiv.org/abs/2607.25864"
   }
 ];
 
@@ -258,8 +256,9 @@ const activities = [
   {
     date: "2026",
     type: "Research highlight",
-    title: "Selected for Vanderbilt Health’s Aliquots research briefs",
-    description: "VUMC News & Communications selected the study on interpretable GPT-4o prediction of cancer medication discontinuation for forthcoming institutional coverage."
+    title: "Featured in Vanderbilt Health’s Aliquots research briefs",
+    description: "Vanderbilt Health News highlighted the study comparing interpretable GPT-4o and traditional machine learning for cancer medication discontinuation prediction.",
+    links: [{label: "Vanderbilt Health News", url: "https://news.vumc.org/2026/07/02/teams-prediction-task-compares-gpt-4o-with-classic-machine-learning/"}]
   },
   {
     date: "2026",
@@ -267,24 +266,6 @@ const activities = [
     title: "Vanderbilt Interdisciplinary Alzheimer’s Disease Journal Club",
     description: "Invited presenter and discussion leader on early Alzheimer’s disease prediction using longitudinal EHR data, hosted by VMAC and VADRC.",
     links: [{label: "Article", url: "https://www.nature.com/articles/s43856-025-01206-w"}]
-  },
-  {
-    date: "2026",
-    type: "Peer review",
-    title: "ACL Rolling Review reviewer",
-    description: "Completed six reviews in the May 2026 cycle, extending peer-review service in NLP, clinical language technology, and LLM reasoning."
-  },
-  {
-    date: "2022–2026",
-    type: "Academic service",
-    title: "Peer reviewer for 23+ unique manuscripts",
-    description: "Review service across JMIR publications, ACM CHI, ICWSM, The Web Conference, ACL Rolling Review, and ACM Web Science; includes journal re-reviews and conference program service."
-  },
-  {
-    date: "2023–2024",
-    type: "Program committee",
-    title: "ACM Web Science Program Committee member",
-    description: "Served on the regular-paper program committees for ACM Web Science 2023 and 2024."
   },
   {
     date: "2025",
