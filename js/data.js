@@ -82,7 +82,7 @@ const publications = [
   {
     year: 2026,
     title: "One Question, Four Voices: How Advice for Alzheimer’s Caregiving Differs Between Caregivers, Clinicians, and Large Language Models",
-    venue: "CSCW 2026, accepted",
+    venue: "CSCW 2026, accepted · Impact Recognition",
     type: "conference",
     status: "accepted",
     links: []
