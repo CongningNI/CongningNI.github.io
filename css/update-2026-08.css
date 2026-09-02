@@ -10,6 +10,17 @@
 .work-tags { display: flex; flex-wrap: wrap; gap: .45rem; justify-content: flex-end; }
 .work-tags span { padding: .3rem .58rem; border-radius: 999px; background: var(--accent-soft); color: var(--accent-dark); font-size: .74rem; font-weight: 720; }
 
+.news-feature {
+  grid-column: 1 / -1;
+  padding: 1.55rem 1.7rem;
+  background: linear-gradient(135deg, rgba(255,255,255,.96), rgba(245,232,229,.78));
+  border-color: #d7beb7;
+  box-shadow: 0 14px 34px rgba(72,48,38,.07);
+}
+.news-feature .activity-date { font-size: .88rem; }
+.news-feature h3 { font-family: Georgia, "Times New Roman", serif; font-size: 1.35rem; letter-spacing: -.02em; }
+.news-feature p:last-child { max-width: 900px; font-size: .92rem; }
+
 .service-grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 1rem; }
 .service-card { padding: 1.4rem; background: rgba(255,255,255,.75); border: 1px solid var(--line); border-radius: var(--radius); }
 .service-type { margin: 0 0 .45rem; color: var(--olive); text-transform: uppercase; letter-spacing: .1em; font-size: .68rem; font-weight: 850; }
