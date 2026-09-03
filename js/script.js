@@ -89,6 +89,15 @@
     activityContainer.appendChild(article);
   });
 
+  const phdHeading = Array.from(document.querySelectorAll(".timeline-item h3"))
+    .find((heading) => heading.textContent.trim() === "Ph.D. in Computer Science");
+  if (phdHeading) {
+    const phdDetails = phdHeading.parentElement;
+    const dissertation = document.createElement("p");
+    dissertation.innerHTML = `Dissertation: <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=ovVin3oAAAAJ&sortby=pubdate&citation_for_view=ovVin3oAAAAJ:kNdYIx-mwKoC" target="_blank" rel="noopener"><em>Murmuring of Alzheimer Caring: Analyzing Social Dynamics in Online Alzheimer’s Disease and Related Dementias Communities</em></a>`;
+    phdDetails.appendChild(dissertation);
+  }
+
   const navToggle = document.querySelector(".nav-toggle");
   const navLinks = document.getElementById("nav-links");
   navToggle.addEventListener("click", () => {
