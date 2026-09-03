@@ -69,7 +69,10 @@ const publications = [
     venue: "AMIA 2026 Annual Symposium, accepted full paper",
     type: "conference",
     status: "accepted",
-    links: [{label: "OpenReview", url: "https://openreview.net/forum?id=dgTh0MYNVP"}]
+    links: [
+      {label: "OpenReview", url: "https://openreview.net/forum?id=dgTh0MYNVP"},
+      {label: "arXiv", url: "https://arxiv.org/abs/2604.00014"}
+    ]
   },
   {
     year: 2026,
@@ -90,23 +93,26 @@ const publications = [
   {
     year: 2026,
     title: "Beyond the Response: Examining Reasoning and Execution Fidelity in Large Language Models for Mental Health",
-    venue: "ACM FAccT 2026, accepted",
+    venue: "The 2026 ACM Conference on Fairness, Accountability, and Transparency (FAccT 2026), 6702–6722",
     type: "conference",
     status: "accepted",
-    links: []
+    links: [{label: "DOI", url: "https://doi.org/10.1145/3805689.3806456"}]
   },
   {
     year: 2026,
     title: "MHGraphBench: Knowledge Graph-Grounded Benchmarking of Mental Health Knowledge in Large Language Models",
-    venue: "GEM 2026 Workshop, accepted poster",
-    type: "preprint",
+    venue: "Proceedings of the Fifth Workshop on Generation, Evaluation and Metrics (GEM), 393–409",
+    type: "conference",
     status: "accepted",
-    links: []
+    links: [
+      {label: "ACL Anthology", url: "https://aclanthology.org/2026.gem-main.38/"},
+      {label: "DOI", url: "https://doi.org/10.18653/v1/2026.gem-main.38"}
+    ]
   },
   {
     year: 2025,
     title: "Catalysts of Conversation: Examining Interaction Dynamics Between Topic Initiators and Commentors in Alzheimer’s Disease Online Communities",
-    venue: "Proceedings of the ACM Web Conference 2025, 4913–4924",
+    venue: "Proceedings of the ACM on Web Conference 2025, 4913–4924",
     type: "conference",
     status: "accepted",
     links: [
