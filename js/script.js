@@ -6,6 +6,27 @@
     .replaceAll('"', "&quot;")
     .replaceAll("'", "&#039;");
 
+  // September 4, 2026: WISE AI-for-Good acceptance.
+  publications.unshift({
+    year: 2026,
+    title: "From Clinical Free Text to Auditable Concepts: An Agentic Framework for Interpretable Prediction",
+    venue: "WISE 2026 AI-for-Good Workshop, accepted",
+    type: "conference",
+    status: "accepted",
+    links: []
+  });
+
+  activities.unshift({
+    date: "Sep 2026",
+    type: "Paper acceptance",
+    title: "WISE 2026 AI-for-Good Workshop",
+    description: "Our paper, ‘From Clinical Free Text to Auditable Concepts: An Agentic Framework for Interpretable Prediction,’ was accepted to the WISE 2026 AI-for-Good Workshop.",
+    links: []
+  });
+
+  const publicationsUpdated = document.querySelector("#publications .updated");
+  if (publicationsUpdated) publicationsUpdated.textContent = "Last updated September 4, 2026";
+
   const formatAuthors = (authors) => {
     const escaped = escapeHtml(authors || "");
     return escaped.replace(/Congning Ni/g, "<strong>Congning Ni</strong>");
