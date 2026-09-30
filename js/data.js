@@ -7,13 +7,6 @@ const activeSubmissions = [
     status: "Under review"
   },
   {
-    title: "Coverage-Controlled Preference Mining from Noisy Claim Verification for Evidence-Grounded Generation",
-    authors: "Weixin Liu, Congning Ni, Qingyuan Song, Susannah Leigh Rose, Murat Kantarcioglu, Bradley A. Malin, Zhijun Yin",
-    venue: "Conference manuscript",
-    date: "Current submission, 2026",
-    status: "Under review"
-  },
-  {
     title: "Characterizing Treatment-Context Medication Evidence Across Clinic Notes and Structured EHR Medication History",
     authors: "Mingyang Jiang, Congning Ni, Weixin Liu, Zhijun Yin",
     venue: "Conference manuscript",
@@ -66,13 +59,22 @@ const publications = [
   {
     year: 2026,
     title: "Disentangling Prompt Element Level Risk Factors for Hallucinations and Omissions in Mental Health LLM Responses",
-    venue: "AMIA 2026 Annual Symposium, accepted full paper",
+    venue: "AMIA 2026 Annual Symposium, accepted regular paper · Oral presentation",
     type: "conference",
     status: "accepted",
     links: [
+      {label: "AMIA Program", url: "https://amia.secure-platform.com/symposium/gallery/rounds/82037/details/29233"},
       {label: "OpenReview", url: "https://openreview.net/forum?id=dgTh0MYNVP"},
       {label: "arXiv", url: "https://arxiv.org/abs/2604.00014"}
     ]
+  },
+  {
+    year: 2026,
+    title: "Coverage-Controlled Preference Mining from Noisy Claim Verification for Evidence-Grounded Generation",
+    venue: "ACML 2026, accepted",
+    type: "conference",
+    status: "accepted",
+    links: [{label: "arXiv", url: "https://arxiv.org/abs/2603.10494"}]
   },
   {
     year: 2026,
@@ -85,10 +87,10 @@ const publications = [
   {
     year: 2026,
     title: "One Question, Four Voices: How Advice for Alzheimer’s Caregiving Differs Between Caregivers, Clinicians, and Large Language Models",
-    venue: "CSCW 2026, accepted · Impact Recognition",
+    venue: "Proceedings of the ACM on Human-Computer Interaction, 10(6), CSCW 2026 · Impact Recognition",
     type: "conference",
     status: "accepted",
-    links: []
+    links: [{label: "DOI", url: "https://doi.org/10.1145/3816980"}]
   },
   {
     year: 2026,
