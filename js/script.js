@@ -16,14 +16,6 @@
     links: []
   });
 
-  activities.unshift({
-    date: "Sep 2026",
-    type: "Paper acceptance",
-    title: "WISE 2026 AI-for-Good Workshop",
-    description: "Our paper, ‘From Clinical Free Text to Auditable Concepts: An Agentic Framework for Interpretable Prediction,’ was accepted to the WISE 2026 AI-for-Good Workshop.",
-    links: []
-  });
-
   const formatAuthors = (authors) => {
     const escaped = escapeHtml(authors || "");
     return escaped.replace(/Congning Ni/g, "<strong>Congning Ni</strong>");
@@ -196,52 +188,50 @@
   });
   applyPublicationView();
 
-  const activityContainer = document.getElementById("activity-list");
-  if (activityContainer) {
-    activities.forEach((item) => {
+  const newsContainer = document.getElementById("activity-list");
+  if (newsContainer) {
+    news.forEach((item) => {
       const article = document.createElement("article");
-      article.className = "activity-card";
+      article.className = "news-entry";
       const links = (item.links || []).map((link) =>
         `<a href="${escapeHtml(link.url)}" target="_blank" rel="noopener">${escapeHtml(link.label)}</a>`
       ).join("");
       article.innerHTML = `
-        <div class="activity-date">${escapeHtml(item.date)}</div>
-        <div>
-          <p class="activity-type">${escapeHtml(item.type)}</p>
+        <div class="news-date">${escapeHtml(item.date)}</div>
+        <span class="news-dot" aria-hidden="true"></span>
+        <div class="news-content">
+          <p class="news-type">${escapeHtml(item.type)}</p>
           <h3>${escapeHtml(item.title)}</h3>
-          <p>${escapeHtml(item.description)}</p>
+          <p class="news-description">${escapeHtml(item.description)}</p>
           ${links ? `<div class="activity-links">${links}</div>` : ""}
         </div>
       `;
-      activityContainer.appendChild(article);
+      newsContainer.appendChild(article);
     });
 
-    // Present recent news first, with the complete archive one click away.
-    const INITIAL_NEWS_COUNT = 2;
-    const newsItems = Array.from(activityContainer.querySelectorAll(".activity-card"));
-    if (newsItems.length > INITIAL_NEWS_COUNT) {
-      let newsExpanded = false;
-      const newsToggleWrap = document.createElement("div");
-      newsToggleWrap.className = "publication-expand-wrap";
-      const newsToggle = document.createElement("button");
-      newsToggle.id = "news-toggle";
-      newsToggle.className = "publication-toggle";
-      newsToggle.type = "button";
-      newsToggle.setAttribute("aria-controls", "activity-list");
-      newsToggleWrap.appendChild(newsToggle);
-      activityContainer.insertAdjacentElement("afterend", newsToggleWrap);
+    const INITIAL_NEWS_COUNT = 4;
+    const entries = Array.from(newsContainer.querySelectorAll(".news-entry"));
+    if (entries.length > INITIAL_NEWS_COUNT) {
+      let expanded = false;
+      const wrap = document.createElement("div");
+      wrap.className = "publication-expand-wrap news-toggle-wrap";
+      const toggle = document.createElement("button");
+      toggle.id = "news-toggle";
+      toggle.className = "publication-toggle";
+      toggle.type = "button";
+      toggle.setAttribute("aria-controls", "activity-list");
+      wrap.appendChild(toggle);
+      newsContainer.insertAdjacentElement("afterend", wrap);
 
       const applyNewsView = () => {
-        newsItems.forEach((item, index) => {
-          const collapsed = !newsExpanded && index >= INITIAL_NEWS_COUNT;
-          item.classList.toggle("news-collapsed", collapsed);
-          item.hidden = collapsed;
+        entries.forEach((entry, index) => {
+          entry.hidden = !expanded && index >= INITIAL_NEWS_COUNT;
         });
-        newsToggle.textContent = newsExpanded ? "Show fewer news" : "Show all news";
-        newsToggle.setAttribute("aria-expanded", String(newsExpanded));
+        toggle.textContent = expanded ? "Show fewer news" : "Show all news";
+        toggle.setAttribute("aria-expanded", String(expanded));
       };
-      newsToggle.addEventListener("click", () => {
-        newsExpanded = !newsExpanded;
+      toggle.addEventListener("click", () => {
+        expanded = !expanded;
         applyNewsView();
       });
       applyNewsView();
@@ -262,7 +252,6 @@
     .publication-expand-wrap { display: flex; justify-content: center; margin-top: 1.25rem; }
     .publication-toggle { border: 1px solid var(--line); background: rgba(255,255,255,.86); color: var(--accent-dark); border-radius: 999px; padding: .62rem 1rem; cursor: pointer; font-size: .84rem; font-weight: 780; }
     .publication-toggle:hover { border-color: var(--accent); color: var(--accent); transform: translateY(-1px); }
-    .activity-card.news-collapsed { display: none; }
   `;
   document.head.appendChild(injectedStyle);
 
