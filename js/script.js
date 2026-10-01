@@ -24,9 +24,6 @@
     links: []
   });
 
-  const publicationsUpdated = document.querySelector("#publications .updated");
-  if (publicationsUpdated) publicationsUpdated.textContent = "Last updated September 4, 2026";
-
   const formatAuthors = (authors) => {
     const escaped = escapeHtml(authors || "");
     return escaped.replace(/Congning Ni/g, "<strong>Congning Ni</strong>");
@@ -218,6 +215,37 @@
       `;
       activityContainer.appendChild(article);
     });
+
+    // Present recent news first, with the complete archive one click away.
+    const INITIAL_NEWS_COUNT = 2;
+    const newsItems = Array.from(activityContainer.querySelectorAll(".activity-card"));
+    if (newsItems.length > INITIAL_NEWS_COUNT) {
+      let newsExpanded = false;
+      const newsToggleWrap = document.createElement("div");
+      newsToggleWrap.className = "publication-expand-wrap";
+      const newsToggle = document.createElement("button");
+      newsToggle.id = "news-toggle";
+      newsToggle.className = "publication-toggle";
+      newsToggle.type = "button";
+      newsToggle.setAttribute("aria-controls", "activity-list");
+      newsToggleWrap.appendChild(newsToggle);
+      activityContainer.insertAdjacentElement("afterend", newsToggleWrap);
+
+      const applyNewsView = () => {
+        newsItems.forEach((item, index) => {
+          const collapsed = !newsExpanded && index >= INITIAL_NEWS_COUNT;
+          item.classList.toggle("news-collapsed", collapsed);
+          item.hidden = collapsed;
+        });
+        newsToggle.textContent = newsExpanded ? "Show fewer news" : "Show all news";
+        newsToggle.setAttribute("aria-expanded", String(newsExpanded));
+      };
+      newsToggle.addEventListener("click", () => {
+        newsExpanded = !newsExpanded;
+        applyNewsView();
+      });
+      applyNewsView();
+    }
   }
 
   const phdHeading = Array.from(document.querySelectorAll(".timeline-item h3"))
@@ -234,6 +262,7 @@
     .publication-expand-wrap { display: flex; justify-content: center; margin-top: 1.25rem; }
     .publication-toggle { border: 1px solid var(--line); background: rgba(255,255,255,.86); color: var(--accent-dark); border-radius: 999px; padding: .62rem 1rem; cursor: pointer; font-size: .84rem; font-weight: 780; }
     .publication-toggle:hover { border-color: var(--accent); color: var(--accent); transform: translateY(-1px); }
+    .activity-card.news-collapsed { display: none; }
   `;
   document.head.appendChild(injectedStyle);
 
