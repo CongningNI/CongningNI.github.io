@@ -36,3 +36,83 @@
 @media (max-width: 720px) {
   .ongoing-heading { align-items: flex-start; flex-direction: column; gap: .5rem; }
 }
+
+
+/* News timeline: chronological editorial layout rather than card blocks. */
+.news-timeline {
+  --news-date-width: 108px;
+  --news-marker-width: 30px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+.news-timeline::before {
+  content: "";
+  position: absolute;
+  top: 1.35rem;
+  bottom: 1.35rem;
+  left: calc(var(--news-date-width) + var(--news-marker-width) / 2 - 1px);
+  width: 2px;
+  background: var(--line);
+}
+.news-entry {
+  position: relative;
+  display: grid;
+  grid-template-columns: var(--news-date-width) var(--news-marker-width) minmax(0, 1fr);
+  column-gap: 0;
+  padding: .3rem 0 1.4rem;
+}
+.news-entry[hidden] { display: none; }
+.news-date {
+  color: var(--accent-dark);
+  font-size: .83rem;
+  font-weight: 820;
+  text-align: right;
+  padding: .15rem .7rem 0 0;
+  white-space: normal;
+}
+.news-dot {
+  justify-self: center;
+  align-self: start;
+  z-index: 1;
+  width: 12px;
+  height: 12px;
+  margin-top: .25rem;
+  border-radius: 50%;
+  background: var(--accent);
+  border: 3px solid var(--surface, #fffaf6);
+  box-shadow: 0 0 0 1px var(--accent);
+}
+.news-content {
+  padding: 0 0 1.4rem .8rem;
+  border-bottom: 1px solid var(--line);
+}
+.news-entry:last-of-type .news-content { border-bottom: 0; }
+.news-type {
+  margin: 0 0 .25rem;
+  font-size: .7rem;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  font-weight: 850;
+  color: var(--olive);
+}
+.news-content h3 {
+  margin: 0 0 .36rem;
+  line-height: 1.33;
+  font-size: 1.12rem;
+}
+.news-description {
+  max-width: 780px;
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.6;
+  font-size: .9rem;
+}
+.news-toggle-wrap { margin-top: .35rem; }
+@media (max-width: 600px) {
+  .news-timeline { --news-date-width: 73px; --news-marker-width: 23px; }
+  .news-date { font-size: .75rem; padding-right: .5rem; }
+  .news-content { padding-left: .58rem; }
+  .news-content h3 { font-size: 1rem; }
+}
