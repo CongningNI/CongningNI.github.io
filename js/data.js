@@ -260,9 +260,38 @@ const publications = [
   }
 ];
 
-const activities = [
+const news = [
   {
-    date: "2026",
+    date: "Sep 2026",
+    type: "Award",
+    title: "Gary Marsden Travel Award",
+    description: "Received a Gary Marsden Travel Award in recognition of contributions to the SIGCHI research community.",
+    links: []
+  },
+  {
+    date: "Sep 2026",
+    type: "Paper acceptance",
+    title: "Paper accepted to ACML 2026",
+    description: "“Coverage-Controlled Preference Mining from Noisy Claim Verification for Evidence-Grounded Generation” was accepted to ACML 2026, held in December in Melbourne, Australia.",
+    links: [{label: "Conference", url: "https://www.acml-conf.org/2026/"}]
+  },
+  {
+    date: "Sep 2026",
+    type: "Recognition · Publication",
+    title: "CSCW 2026 Impact Recognition",
+    description: "“One Question, Four Voices” received an Impact Recognition and is now formally published in Proceedings of the ACM on Human-Computer Interaction.",
+    links: [{label: "ACM DOI", url: "https://doi.org/10.1145/3816980"}]
+  },
+  {
+    date: "Sep 2026",
+    type: "Paper acceptance",
+    title: "Paper accepted to the WISE 2026 AI-for-Good Workshop",
+    description: "“From Clinical Free Text to Auditable Concepts: An Agentic Framework for Interpretable Prediction” was accepted to the WISE 2026 AI-for-Good Workshop.",
+    links: []
+  },
+
+  {
+    date: "Jul 2026",
     type: "Research highlight",
     title: "Featured in Vanderbilt Health’s Aliquots research briefs",
     description: "Vanderbilt Health News highlighted the study comparing interpretable GPT-4o and traditional machine learning for cancer medication discontinuation prediction.",
@@ -276,21 +305,21 @@ const activities = [
     links: [{label: "Article", url: "https://www.nature.com/articles/s43856-025-01206-w"}]
   },
   {
-    date: "2025",
+    date: "Nov 2025",
     type: "Scientific presentation",
     title: "AMIA 2025 Annual Symposium",
     description: "Presented performance evaluation of GPT-4o and traditional machine learning for cancer medication discontinuation prediction.",
     links: [{label: "Paper", url: "https://doi.org/10.3233/SHTI260271"}]
   },
   {
-    date: "2025",
+    date: "Aug 2025",
     type: "Scientific presentation",
     title: "IMIA MedInfo 2025",
     description: "Presented research on online caregiving discussions across racial groups of informal Alzheimer’s disease caregivers.",
     links: [{label: "Paper", url: "https://doi.org/10.3233/SHTI251366"}]
   },
   {
-    date: "2025",
+    date: "Apr–May 2025",
     type: "Scientific presentation",
     title: "The ACM Web Conference 2025",
     description: "Presented Catalysts of Conversation, a study of interaction dynamics in Alzheimer’s disease online communities.",
