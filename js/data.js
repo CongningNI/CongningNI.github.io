@@ -7,14 +7,6 @@ const activeSubmissions = [
     status: "Under review"
   },
   {
-    title: "Characterizing Treatment-Context Medication Evidence Across Clinic Notes and Structured EHR Medication History",
-    authors: "Mingyang Jiang, Congning Ni, Weixin Liu, Zhijun Yin",
-    venue: "Conference manuscript",
-    date: "Submitted August 2026",
-    status: "Under review",
-    url: "https://arxiv.org/abs/2608.01570"
-  },
-  {
     title: "CoRA: Confidence–Rationale Alignment for Reliable Chain-of-Thought Reasoning",
     authors: "Juming Xiong, Weixin Liu, Kevin H. Guo, Congning Ni, Junchao Zhu, Chongyu Qu, Chao Yan, Katherine Brown, Avinash Baidya, Xiang Gao, Bradley A. Malin, Zhijun Yin",
     venue: "Conference manuscript",
@@ -56,6 +48,15 @@ const activeSubmissions = [
 ];
 
 const publications = [
+  {
+    year: 2026,
+    title: "Characterizing Treatment-Context Medication Evidence Across Clinic Notes and Structured EHR Medication History",
+    venue: "IEEE BIBM 2026 Workshop, accepted (revision requested)",
+    type: "conference",
+    status: "accepted",
+    links: [{label: "arXiv", url: "https://arxiv.org/abs/2608.01570"}]
+  },
+
   {
     year: 2026,
     title: "Disentangling Prompt Element Level Risk Factors for Hallucinations and Omissions in Mental Health LLM Responses",
