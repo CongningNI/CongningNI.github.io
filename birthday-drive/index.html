@@ -38,12 +38,12 @@ header:before{content:"";position:absolute;inset:0;background:radial-gradient(ci
 .chooseHead{border-top:1px solid var(--rule);padding-top:34px;display:flex;justify-content:space-between;align-items:end;gap:22px}
 .chooseHead h2{font-size:clamp(42px,6vw,70px);letter-spacing:-.067em;line-height:1.04;margin:12px 0 0}
 .chooseHead p{font-size:14px;line-height:1.8;color:#777068;max-width:430px;margin:0}
-.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;padding:36px 0 92px}
+.cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;padding:36px 0 92px}
 .card{background:#fffdf9;display:flex;flex-direction:column;border:1px solid #dfd8cc;border-radius:12px;overflow:hidden;transition:transform .18s,box-shadow .18s,border-color .18s}
 .card:hover{transform:translateY(-3px);box-shadow:0 16px 34px rgba(41,32,25,.08)}
 .card.selected{border:2px solid #db815d;box-shadow:0 14px 30px rgba(232,121,83,.11)}
 .art{height:175px;position:relative;overflow:hidden;background:#27352f;color:#eee;padding:20px}
-.art.xtreme{background:#43312c}.art.nascar{background:#26313b}
+.art.xtreme{background:#43312c}.art.nascar{background:#26313b}.art.own{background:linear-gradient(135deg,#2d3c42,#46605d)}
 .art .place{font-size:10px;font-weight:800;letter-spacing:.16em;position:relative;z-index:2}
 .art .digit{position:absolute;right:20px;top:-27px;font-size:130px;font-weight:900;color:rgba(255,255,255,.075);letter-spacing:-.1em}
 .art svg{position:absolute;left:7%;bottom:5px;width:86%;height:113px}
@@ -105,7 +105,7 @@ footer span{display:block;margin-top:11px;font-size:11px;color:#91897d;letter-sp
 <section class="wrap" id="choose">
  <div class="chooseHead">
   <div><div class="lineLabel">STEP 01 · THE FUN PART</div><h2>Choose your ride.</h2></div>
-  <p>三个地方，各一张 Gift Certificate。每家只给你一个我做完功课后的推荐组合；不是三份作业，不用全做。😎</p>
+  <p>四种玩法，各有一张 Gift Certificate。每家只给你一个我做完功课后的推荐组合；不是四份作业，不用全做。😎</p>
  </div>
  <div class="cards">
   <article class="card" data-id="porsche">
@@ -141,9 +141,20 @@ footer span{display:block;margin-top:11px;font-size:11px;color:#91897d;letter-sp
     <button type="button" class="pick" data-pick="nascar" aria-pressed="false">CHOOSE THIS ONE →</button>
    </div>
   </article>
+  <article class="card" data-id="ncm">
+   <div class="art own"><span class="place">04 / BOWLING GREEN, KENTUCKY</span><span class="digit">04</span><svg viewBox="0 0 300 110" aria-hidden="true"><path d="M16 69Q28 65 64 62L96 43L188 42L219 60L280 67L287 79L14 79Z" fill="none" stroke="#dfe8d7" stroke-width="3"/><path d="M99 47L178 47L210 61H79Z" fill="#dfe8d7" opacity=".20"/><path d="M40 67L76 66M225 69H276" stroke="#dfe8d7" stroke-width="3"/><circle cx="74" cy="78" r="19" fill="#283c42" stroke="#dfe8d7" stroke-width="3"/><circle cx="234" cy="78" r="19" fill="#283c42" stroke="#dfe8d7" stroke-width="3"/></svg></div>
+   <div class="cardInner">
+    <div class="tag">Our own car · real track school</div><h3>NCM Motorsports Park</h3>
+    <div class="denom">$500 <small>Gift Card</small></div>
+    <p class="blurb">这次不借超跑，直接把我们的 GR Corolla 开进赛车场！从基础控车到真正过弯，主打一个“原来咱家的车也能这么玩”。</p>
+    <div class="choiceNote"><strong>我的推荐：</strong>GR Corolla · Introduction to High Performance Driving<br><span style="font-size:12px;color:#786f66">自家车上赛道前，先确认活动资格与专项保险。毕竟咱家的车也要平安回家。</span></div>
+    <a class="learn" href="https://www.motorsportspark.org/drive-your-car/" target="_blank" rel="noopener noreferrer">看看官网 ↗</a>
+    <button type="button" class="pick" data-pick="ncm" aria-pressed="false">CHOOSE THIS ONE →</button>
+   </div>
+  </article>
  </div>
 </section>
-<section class="redeem" id="redeem">
+<section class="redeem" id="redeem"
  <div class="wrap redeemGrid">
   <div><div class="lineLabel">STEP 02 · THE VERY EASY PART</div><h2>Pick one.<br>Text me. Done.</h2><p>决定好了就给我发短信。我负责买单，你负责安排出行，我负责拍照记录。♡</p></div>
   <div class="selection" aria-live="polite">
@@ -163,7 +174,8 @@ footer span{display:block;margin-top:11px;font-size:11px;color:#91897d;letter-sp
  const options={
   porsche:{name:"Porsche Experience Center Atlanta",amount:"$550 Gift Certificate",recommend:"718 Cayman / South Track"},
   xtreme:{name:"Xtreme Xperience Nashville",amount:"$500 Gift Card",recommend:"Cayman GT4 RS + Premium Protection"},
-  nascar:{name:"NASCAR Racing Experience Nashville",amount:"$500 Gift Certificate",recommend:"8-minute Drive + Driver's Fee"}
+  nascar:{name:"NASCAR Racing Experience Nashville",amount:"$500 Gift Certificate",recommend:"8-minute Drive + Driver's Fee"},
+  ncm:{name:"NCM Motorsports Park Bowling Green",amount:"$500 Gift Card",recommend:"Our GR Corolla / Introduction to High Performance Driving (track insurance to confirm)"}
  };
  let chosen=null;
  const recipient=["+1","615","638","1164"].join("");
