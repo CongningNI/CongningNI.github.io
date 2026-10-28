@@ -4,7 +4,8 @@ const activeSubmissions = [
     authors: "Congning Ni, Lantian Xia, Lijun Song, Qingxia Chen, Sean S. Huang, Bradley Malin, Zhijun Yin",
     venue: "JMIR Aging",
     date: "Submitted May 5, 2026",
-    status: "Under review"
+    status: "Under review",
+    url: "https://www.medrxiv.org/content/10.64898/2026.09.02.26362079v1"
   },
   {
     title: "CoRA: Confidence–Rationale Alignment for Reliable Chain-of-Thought Reasoning",
@@ -48,6 +49,22 @@ const activeSubmissions = [
 ];
 
 const publications = [
+  {
+    year: 2026,
+    title: "CPT/HCPCS Code Recommendation from Clinical Notes: A Comparative Evaluation of AI Methods",
+    venue: "IEEE BigData 2026 · 9th Special Session on Healthcare Data, accepted",
+    type: "conference",
+    status: "accepted",
+    links: [{label: "medRxiv", url: "https://www.medrxiv.org/content/10.64898/2026.08.29.26361731v1"}]
+  },
+  {
+    year: 2026,
+    title: "From Clinical Free Text to Auditable Concepts: An Agentic Framework for Interpretable Prediction",
+    venue: "WISE 2026 · 3rd International Workshop on AI-for-Good: AI for a Better Society, accepted",
+    type: "conference",
+    status: "accepted",
+    links: [{label: "medRxiv", url: "https://www.medrxiv.org/content/10.64898/2026.09.02.26362086v1"}]
+  },
   {
     year: 2026,
     title: "Characterizing Treatment-Context Medication Evidence Across Clinic Notes and Structured EHR Medication History",
@@ -262,6 +279,13 @@ const publications = [
 ];
 
 const news = [
+  {
+    date: "Oct 2026",
+    type: "Paper acceptance",
+    title: "Paper accepted to IEEE BigData 2026",
+    description: "“CPT/HCPCS Code Recommendation from Clinical Notes: A Comparative Evaluation of AI Methods” was accepted for presentation at the 9th Special Session on Healthcare Data, held as part of IEEE BigData 2026.",
+    links: [{label: "medRxiv", url: "https://www.medrxiv.org/content/10.64898/2026.08.29.26361731v1"}]
+  },
   {
     date: "Sep 2026",
     type: "Award",
