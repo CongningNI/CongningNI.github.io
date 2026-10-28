@@ -10,40 +10,33 @@ const activeSubmissions = [
   {
     title: "CoRA: Confidence–Rationale Alignment for Reliable Chain-of-Thought Reasoning",
     authors: "Juming Xiong, Weixin Liu, Kevin H. Guo, Congning Ni, Junchao Zhu, Chongyu Qu, Chao Yan, Katherine Brown, Avinash Baidya, Xiang Gao, Bradley A. Malin, Zhijun Yin",
-    venue: "Conference manuscript",
-    date: "Current submission, 2026",
+    venue: "ACL ARR 2026 October",
+    date: "Submitted October 2026",
     status: "Under review",
     url: "https://arxiv.org/abs/2606.14961"
   },
   {
     title: "Vectors Are Not Neutral: Sensitive-Information Inference from Exported LLM Representations in Summarization",
     authors: "Weixin Liu, Bowen Qu, Juming Xiong, Congning Ni, Bradley A. Malin, Zhijun Yin",
-    venue: "Conference manuscript",
-    date: "Current submission, 2026",
-    status: "Under review",
+    venue: "EACL 2027 ARR Commitment",
+    date: "Committed October 2026",
+    status: "Under consideration",
     url: "https://arxiv.org/abs/2605.26433"
   },
   {
     title: "Learning When to Sample: Confidence-Aware Selective Sampling for Efficient Chain-of-Thought Reasoning",
     authors: "Juming Xiong, Kevin H. Guo, Congning Ni, Weixin Liu, Chao Yan, Katherine Brown, Avinash Baidya, Xiang Gao, Bradley A. Malin, Zhijun Yin",
-    venue: "Conference manuscript",
-    date: "Current submission, 2026",
+    venue: "ICLR 2027",
+    date: "Submitted September 2026",
     status: "Under review",
     url: "https://arxiv.org/abs/2603.08999"
   },
   {
-    title: "A Multi-Stakeholder Benchmark for Hallucination and Omission Detection in Mental Health Chatbot Responses",
-    authors: "Khizar Hussain, Bradley A. Malin, Congning Ni, Laurie Lovett Novak, Shelagh A. Mulvaney, Susannah Leigh Rose, Zhijun Yin, Murat Kantarcioglu",
-    venue: "Conference manuscript",
-    date: "Submitted May 2026",
-    status: "Under review"
-  },
-  {
     title: "DRIFT: Direct-Recursive Intervention-Conditioned Forecasting of ICU Physiological Trajectories",
     authors: "Weixin Liu, Juming Xiong, Congning Ni, Yanfan Zhu, Xingtao Lin, Bradley A. Malin, Zhijun Yin",
-    venue: "Conference manuscript",
+    venue: "AAAI 2027",
     date: "Submitted July 2026",
-    status: "Under review",
+    status: "Decision pending",
     url: "https://arxiv.org/abs/2607.25864"
   }
 ];
